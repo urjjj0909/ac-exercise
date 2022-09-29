@@ -33,7 +33,6 @@ function renderMovieList(data) {
             `
         })
         htmlContent += `</ul>`
-        
         return htmlContent
     }
 
@@ -56,10 +55,8 @@ function renderMovieList(data) {
                 </div>
             `
         })
-        
         return htmlContent
     }
-
     dataPanel.innerHTML = dataPanel.dataset.mode==="card-mode"? cardMode() : listMode()
 }
 
