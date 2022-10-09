@@ -55,7 +55,27 @@ app.get("/todos/:id", (req, res) => {
     const id = req.params.id
     Todo.findById(id)
         .lean()
-        .then((todo) => res.render("detail", { todo: todo }))
+        .then(todo => res.render("detail", { todo: todo }))
+        .catch(error => console.log(error))
+})
+
+app.get("/todos/:id/edit", (req, res) => {
+    const id = req.params.id
+    Todo.findById(id)
+        .lean()
+        .then(todo => res.render("edit", { todo: todo }))
+        .catch(error => console.log(error))
+})
+
+app.post("/todos/:id/edit", (req, res) => {
+    const id = req.params.id
+    const newName = req.body.name
+    Todo.findById(id)
+        .then(todo => {
+            todo.name = newName
+            todo.save()
+        })
+        .then(() => res.redirect(`/todos/${id}`))
         .catch(error => console.log(error))
 })
 
