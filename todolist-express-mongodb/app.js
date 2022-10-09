@@ -44,11 +44,19 @@ app.post("/todos", (req, res) => {
     // todo.save()
     //     .then(() => res.redirect("/"))
     //     .catch(error => console.error(error))
-    
+
     // 或是直接操作Todo
     Todo.create({ name: name })
         .then(() => res.redirect("/"))
         .catch(error => console.error(error))
+})
+
+app.get("/todos/:id", (req, res) => {
+    const id = req.params.id
+    Todo.findById(id)
+        .lean()
+        .then((todo) => res.render("detail", { todo: todo }))
+        .catch(error => console.log(error))
 })
 
 app.listen(port, () => {
