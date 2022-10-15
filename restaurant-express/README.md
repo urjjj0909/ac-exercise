@@ -8,27 +8,27 @@
 ## Get started
 確認安裝`node.js`與`npm`後，將專案clone到本地，透過終端機進入資料夾輸入：
 
- ```
- npm install
- ```
+```
+npm install
+```
 
 安裝完畢後，繼續輸入：
 
- ```
- npm run start
- ```
+```
+npm run start
+```
 
 若看見此行訊息則代表順利運行，打開瀏覽器進入到以下網址：
 
- ```
- Listening on http://localhost:5000
- ```
+```
+Listening on http://localhost:5000
+```
 
 若欲暫停使用：
 
- ```
- ctrl + c
- ```
+```
+ctrl + c
+```
 
 ## Packages
 - Node.js 10.15.0
