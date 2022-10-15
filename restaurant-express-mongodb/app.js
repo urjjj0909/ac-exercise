@@ -19,6 +19,9 @@ app.use(methodOverride("_method"))
 app.engine("hbs", exphbs({ defaultLayout: "main", extname: ".hbs" }))
 app.set("view engine", "hbs")
 
+// Setting static files.
+app.use(express.static("public"))
+
 // 將request導入路由器
 app.use(routes)
 

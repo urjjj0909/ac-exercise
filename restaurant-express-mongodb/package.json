@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-		"start": "node app.js",
-		"dev": "nodemon app.js",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed": "node ./models/seeds/seed.js"
   },
@@ -13,9 +13,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
-    "express-handlebars": "^6.0.6",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.2",
     "method-override": "^3.0.0",
-    "mongoose": "^6.6.5"
+    "mongoose": "^6.0.5"
   }
 }
