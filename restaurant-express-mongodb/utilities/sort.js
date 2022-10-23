@@ -3,9 +3,9 @@ function sorting(sortIndex) {
     switch (sortIndex) {
         case "1":
             return [{ name: "asc" }, sortOptionsBool]
-        case '2':
+        case "2":
             return [{ name: "desc" }, sortOptionsBool]
-        case '3':
+        case "3":
             return [{ category: "asc" }, sortOptionsBool]
         default:
             return [{ location: "asc" }, sortOptionsBool]
